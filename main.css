@@ -1,0 +1,113 @@
+:root {
+  --Moderateviolet: hsl(263, 55%, 52%);
+  --Verydarkgrayishblue: hsl(217, 19%, 35%);
+  --Verydarkblackishblue: hsl(219, 29%, 14%);
+  --White: hsl(0, 0%, 100%);
+  --Lightgray: hsl(0, 0%, 81%);
+  --Lightgrayishblue: hsl(210, 46%, 95%);
+  --Weights500: 500;
+  --Weights600: 600;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-size: 13px;
+  background-color: var(--Lightgrayishblue);
+  min-height: 100vh;
+  display: grid;
+  justify-content: center;
+  padding:  80px 100px;
+  color: var(--White);
+}
+
+main {
+  display: grid;
+  grid-template-areas:
+    'item1 item1 item1 item1 item2  item3   '
+    'item4       item5 item5 item5 item5   item3';
+  gap: 30px;
+  padding: 10px 30px;
+  grid-template-columns: repeat(6, auto);
+  grid-template-rows: repeat(2, auto);
+
+}
+.item1 {
+  grid-area: item1;
+  background-color: var(--Moderateviolet);
+  color: var(--White);
+}
+.item2 {
+  grid-area: item2;
+  background-color: var(--Verydarkgrayishblue);
+  color: var(--White)
+}
+.item3 {
+  grid-area: item3;
+  background-color: var(--White);
+  color: var(--Verydarkblackishblue)
+}
+.item4 {
+  grid-area: item4;
+  background-color: var(--White);
+  color: var(--Verydarkblackishblue)
+}
+.item5 {
+  grid-area: item5;
+  background-color: var(--Verydarkblackishblue);
+  color: var(--White)
+}
+main>div {
+  text-align: center;
+  padding: 30px 45px 15px 45px;
+  border-radius: 10px;
+}
+.logo {
+  display: flex;
+  align-items: center;
+}
+img {
+  border-radius: 50%;
+  width: 28px;
+  border: 2px solid transparent;
+  margin-bottom: auto;
+  margin-right: 20px;
+}
+h2 {
+  font-size: 18px;
+  font-weight: var(--Weights500);
+  padding-bottom: 20px;
+  text-align: left;
+}
+h2 span,
+p {
+  font-size: 15px;
+  opacity: 0.5;
+  padding-top: 10px;
+  text-align: left;
+  line-height: 1.6;
+}
+.articl p:first-of-type {
+  padding-bottom: 20px;
+  font-size: 20px;
+  opacity: 1;
+  font-weight: var(--Weights600);
+}
+.articl p:last-of-type {
+  font-weight: var(--Weights500);
+}
+@media screen and (max-width: 700px) {
+  main {
+    display: flex;
+    flex-direction: column;
+  }
+  body {
+   
+    padding:  80px 20px;
+   
+  }
+}
